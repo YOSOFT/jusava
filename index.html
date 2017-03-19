@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -495,10 +495,10 @@
     </xml>
 
     <!-- Sidebar -->
-    <h1>Vertical Blocks</h1>
+    <h1>Hackathon Azure IoT</h1>
     <p>
-      <a href="javascript:void(workspace.setVisible(true))">Show</a>
-      - <a href="javascript:void(workspace.setVisible(false))">Hide</a>
+      <a href="javascript:void(workspace.setVisible(true))">Mostrar</a>
+      - <a href="javascript:void(workspace.setVisible(false))">Ocultar</a>
     </p>
 
     <form id="options">
@@ -507,23 +507,23 @@
           <option value="rtl">RTL</option>
         </select>
         <select name="toolbox" onchange="document.forms.options.submit()">
-          <option value="categories">Categories</option>
+          <option value="categories">Categorias</option>
           <option value="simple">Simple</option>
         </select>
         <select name="side" onchange="document.forms.options.submit()">
-          <option value="start">Start</option>
-          <option value="end">End</option>
-          <option value="top">Top</option>
-          <option value="bottom">Bottom</option>
+          <option value="start">Izquierda</option>
+          <option value="end">Derecha</option>
+          <option value="top">Arriba</option>
+          <option value="bottom">Abajo</option>
         </select>
       </form>
 
     <p>
-      <input type="button" value="Export to XML" onclick="toXml()">
+      <!--<input type="button" value="Export to XML" onclick="toXml()">
       &nbsp;
       <input type="button" value="Import from XML" onclick="fromXml()" id="import">
-      <br>
-      <input type="button" value="To JavaScript" onclick="toCode('Arduino')">
+      <br>-->
+      <input type="button" value="Arduino" onclick="toCode('Arduino')">
       <br>
       <textarea id="importExport" style="width: 26%; height: 12em"
         onchange="taChange();" onkeyup="taChange()"></textarea>
@@ -531,45 +531,18 @@
 
     <hr>
 
-    <p>
-      Log events: &nbsp;
-      <input type="checkbox" onclick="logEvents(this.checked)" id="logCheck">
-    </p>
 
     <p>
-      Stress test: &nbsp;
-      <input type="button" value="Sprinkles!" onclick="sprinkles(100)">
-      <input type="button" value="Spaghetti!" onclick="spaghetti(3)">
-      <input type="button" value="Fake some drags!" onclick="fakeManyDrags()">
-    </p>
-
-    <p>
-      Glows: &nbsp;
-      <input type="button" value="Glow last clicked block" onclick="glowBlock()" />
-      <input type="button" value="Unglow last clicked block" onclick="unglowBlock()" />
-      <input type="button" value="Stack glow last clicked block" onclick="glowStack()" />
-      <input type="button" value="Stack unglow last clicked block" onclick="unglowStack()" />
-    </p>
-
-    <p>
-      Log flyout events: &nbsp;
-      <input type="checkbox" onclick="logFlyoutEvents(this.checked)" id="logFlyoutCheck">
-    </p>
-
-    <p>
-      Enable sounds (after refresh): &nbsp;
+     Habiliar Sonido;
       <input type="checkbox" onclick="setSoundsEnabled(this.checked)" id="soundsEnabled">
     </p>
 
     <p>
-      <input type="button" value="Undo" onclick="workspace.undo()" />
-      <input type="button" value="Redo" onclick="workspace.undo(true)" />
+      <input type="button" value="Deshacer" onclick="workspace.undo()" />
+      <input type="button" value="Rehacer" onclick="workspace.undo(true)" />
     </p>
 
     <p>
-      Report:
-      <input id="reportValue" type="text" value="123" />
-      <input type="button" value="Report last clicked block" onclick="reportDemo()" />
-    </p>
+
   </body>
 </html>
